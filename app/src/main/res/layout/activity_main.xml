@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A160F1"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/Court_Counter_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="20dp"
+        android:background="#F6744B"
+        android:text="Court Counter"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TeamA_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="80dp"
+        android:text="Team A"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TeamB_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="80dp"
+        android:text="Team B"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_3A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="230dp"
+        android:onClick="IncreaseScore"
+        android:text="+3 points"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/button_3B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="230dp"
+        android:onClick="IncreaseScore"
+        android:text="+3 points"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_2A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:onClick="IncreaseScore"
+        android:text="+2 points"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@id/button_3A"
+        app:layout_constraintTop_toBottomOf="@id/button_3A" />
+
+    <Button
+        android:id="@+id/button_2B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:onClick="IncreaseScore"
+        android:text="+2 points"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@id/button_3B"
+        app:layout_constraintTop_toBottomOf="@id/button_3B" />
+
+    <Button
+        android:id="@+id/button_1A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:onClick="IncreaseScore"
+        android:text="+1 points"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@id/button_2A"
+        app:layout_constraintTop_toBottomOf="@id/button_2A" />
+
+    <Button
+        android:id="@+id/button_1B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:onClick="IncreaseScore"
+        android:text="+1 points"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@id/button_2B"
+        app:layout_constraintTop_toBottomOf="@id/button_2B" />
+
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FFC10F"
+        android:onClick="oClear"
+        android:text="reset"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editableNumberA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:ems="4"
+        android:inputType="number"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@id/button_3A"
+        app:layout_constraintEnd_toEndOf="@id/button_3A"
+        app:layout_constraintStart_toStartOf="@id/button_3A" />
+
+    <EditText
+        android:id="@+id/editableNumberB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:ems="4"
+        android:inputType="number"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@id/button_3B"
+        app:layout_constraintEnd_toEndOf="@id/button_3B"
+        app:layout_constraintStart_toStartOf="@id/button_3B" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="130dp"
+        android:layout_height="170dp"
+        app:srcCompat="@drawable/basketball"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toTopOf="@id/button_reset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
